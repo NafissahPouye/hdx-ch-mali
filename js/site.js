@@ -26,7 +26,7 @@ function generateringComponent(vardata, vargeodata){
   trends.width(560)
                .height(535)
                .dimension(chartDimension)
-               .x(d3.scale.linear().domain([1996, 2017]))
+               .x(d3.scale.linear().domain([2013, 2017]))
                .legend(dc.legend().x($('#phasesChart').width()-80).y(0).gap(3))
                .shareTitle(false)
                .valueAccessor(function(p) {
@@ -34,15 +34,15 @@ function generateringComponent(vardata, vargeodata){
             })
                .compose([
                  dc.lineChart(trends).group(phase1Group, "Phase 1").colors(colors[0]).title(function (p) {
-                   return ["Année      : " + p.key , "Phase 1 : " + numberFormat(p.value) + "M" ].join('\n'); }).renderDataPoints({radius: 2, fillOpacity: 0.8, strokeOpacity: 0.8}),
+                   return ["Année      : " + p.key , "Phase 1 : " + numberFormat(p.value) + "M" ].join('\n'); }).renderArea(true).renderDataPoints({radius: 2, fillOpacity: 0.8, strokeOpacity: 0.8}),
                   dc.lineChart(trends).group(phase2Group, "Phase 2").colors(colors[1]).title(function (p) {
-                   return ["Année         : " + p.key , "Phase 2 : " + numberFormat(p.value) + "M"].join('\n'); }).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
+                   return ["Année         : " + p.key , "Phase 2 : " + numberFormat(p.value) + "M"].join('\n'); }).renderArea(true).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
                   dc.lineChart(trends).group(phase3Group, "Phase 3").colors(colors[2]).title(function (p) {
-                   return ["Année         : " + p.key , "Phase 3 : " + numberFormat(p.value) + "M"].join('\n'); }).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
+                   return ["Année         : " + p.key , "Phase 3 : " + numberFormat(p.value) + "M"].join('\n'); }).renderArea(true).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
                    dc.lineChart(trends).group(phase4Group, "Phase 4").colors(colors[3]).title(function (p) {
-                   return ["Année         : " + p.key , "Phase 4 : " + numberFormat(p.value) + "M"].join('\n'); }).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
+                   return ["Année         : " + p.key , "Phase 4 : " + numberFormat(p.value) + "M"].join('\n'); }).renderArea(true).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
                     dc.lineChart(trends).group(phase5Group, "Phase 5").colors(colors[4]).title(function (p) {
-                   return ["Année         : " + p.key , "Phase 5 : " + numberFormat(p.value) + "M"].join('\n'); }).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
+                   return ["Année         : " + p.key , "Phase 5 : " + numberFormat(p.value) + "M"].join('\n'); }).renderArea(true).renderDataPoints({radius: 2, fillOpacity: 0.8, stroke: 0.8}),
                 ])
                .label(function (p) { return p.key; })
               /* .title(function (d) {
@@ -85,13 +85,13 @@ dc.dataCount('#count-info')
 
              .colorAccessor(function (d){
                var c = 0
-                if(d>=1){
-                    c=  1;
-                } else if (d>=2) {
+                if(d>4){
+                    c=  3;
+                } else if (d>3) {
                     c = 2;
-                } else  if (d>=3){
-                    c = 3;
-                 } else if (d>=4) {
+                } else  if (d>2){
+                    c = 1;
+               }   else if (d>1) {
                     c=4;}
                 return c
              
