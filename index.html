@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Cadre Harmonisé - Mali </title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" ype="text/css" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+        <link rel="stylesheet" type="text/css" href="css/leaflet.css"/>
+        <link rel="stylesheet" type="text/css" href="css/site.css"/>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/crossfilter.v1.min.js"></script>
+        <script src="js/dc.min.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/dc.leaflet.js"></script>
+
+    </head>
+    <body>
+      <div class="container-fluid" id='main-container'>
+        <div class='content'>
+          <div class='container'>
+          	<div class="row">
+              <div class="col-md-11"> 
+                <h3> Cadre harmonisé - Mali </h3>
+                <p style="font-size: 13px;"> Cette visualisation montre la situation de l'insécurité alimentaire dans les districts du Mali.
+              </div>
+             <div class="col-md-1">
+              <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All</a>
+            </div>
+          </div>
+            <div id="header"></div>
+          <div class="row">
+            <div class="col-md-6" id="phasesChart">  <center> <em> Phases </em> </center> </div>
+            <center> <em> Choroplèthe des phases </em> </center>
+            <BR CLEAR=""right"">
+            <div class="col-md-6" id="Map">  </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src="js/site.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,83 @@
+.dc-chart g.row text {
+    fill: black;
+    font-size:0.8ex;
+}
+
+.dc-chart .pie-slice {
+    fill:black;
+}
+
+.x-axis-label{
+    font-size:1.3px;
+}
+.y-axis-label{
+   font-size:1.3px;
+}
+.em{
+  font-size: 0.1px
+}
+
+#Map{
+    height:450px;
+}
+
+#descriptif{
+  margin-left: 20px;
+  text-align: justify;
+  margin-bottom : 1.5px ;
+  font-size: 13px;
+  
+}
+#reset{
+  margin-top:20px;
+
+}
+
+#header{
+    /*padding-bottom:10px;*/
+    border-bottom-color: #dddddd;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-bottom:5px;
+}
+
+#footer{
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top-color: #dddddd;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+.removepadding {
+    padding-right:0px;
+    padding-left:0px;
+}
+
+ .hdx-3w-chart {
+    width:10%;
+ }
+
+ .hdx-3w-info{
+    padding:5px;
+    background-color:white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+ }
+.legend {
+    line-height: 18px;
+    background-color:white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    color:steelblue;
+    font-size:1em;
+    padding:5px;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
