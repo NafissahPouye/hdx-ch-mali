@@ -85,14 +85,14 @@ dc.dataCount('#count-info')
 
              .colorAccessor(function (d){
                var c = 0
-                if(d>4){
-                    c=  3;
-                } else if (d>3) {
+                if(d>3){
+                    c=  4;
+                } else if (d>2) {
+                    c = 3;
+                } else  if (d>1){
                     c = 2;
-                } else  if (d>2){
-                    c = 1;
-               }   else if (d>1) {
-                    c=4;}
+               }   else if (d>0) {
+                    c = 1;}
                 return c
              
             })         
